@@ -17,7 +17,7 @@
         return array;
     }
 
-    const testArray = [2,20,1,56,21,3,9,2,6,1,99,34];
+    const testArray = [2,20,1,56,21,3,9,24,6,12,99,34];
     let sortedArray = sort(testArray);
     console.log(sortedArray);
 
