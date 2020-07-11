@@ -20,7 +20,7 @@
         }
         return array;
     }
-    const testArray = [2, 20, 1, 56, 21, 3, 9, 24, 6, 12, 99, 34];
+    const testArray = [20, 2, 1, 56, 21, 3, 9, 24, 6, 12, 99, 34];
     let ascArray = ascSort(testArray);
     console.log(ascArray);
 
