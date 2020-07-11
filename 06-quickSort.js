@@ -42,19 +42,21 @@
         return pivotIndex;
     }
 
-    //原理：计数法，找出比基准值小的个数，换至前几位
+    //原理：以第一个为基准值不动，计数法，找出比基准值小的个数，换至前几位
     //一共有三个比基准值小，则依次将其放在1,2,3位置即可
-    const partition = function partition(arr, left ,right) {     // 分区操作
-        let pivotIndex = left,                      // 设定基准值（pivot）
-            index = pivotIndex + 1;
-        for(let i = index; i <= right; i++) {
-            if(arr[i] < arr[pivotIndex]) {
+    const partition = function partition(arr, left, right) {     // 分区操作
+        let pivotIndex = left;
+        let pivot = arr[pivotIndex];
+        let index = pivotIndex + 1;
+        for (let i = index; i <= right; i++) {
+            if (arr[i] < pivot) {
                 swap(arr, i, index);
                 index++;
-            }       
+            }
         }
+        // 比基准值小的总计有index-1个，将最后一个比基准值小的和基础位置更换
         swap(arr, pivotIndex, index - 1);
-        return index-1;
+        return index - 1;
     }
 
 
