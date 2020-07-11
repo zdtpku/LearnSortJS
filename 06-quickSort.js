@@ -24,7 +24,7 @@
 
     //主要目的为求基准在什么位置，左边都比其小，右边都比其大
     //难点在于如何将pivotInde找出：思路在于从右边找小的挖坑，再从左边找大的填坑
-    const partition1 = function (array, left, right) {
+    const partition = function (array, left, right) {
         let pivotIndex = left;
         let pivot = array[pivotIndex];
         while (right > left) {
@@ -44,7 +44,7 @@
 
     //原理：以第一个为基准值不动，计数法，找出比基准值小的个数，换至前几位
     //一共有三个比基准值小，则依次将其放在1,2,3位置即可
-    const partition = function partition(arr, left, right) {     // 分区操作
+    const partitionByIndex = function partition(arr, left, right) {     // 分区操作
         let pivotIndex = left;
         let pivot = arr[pivotIndex];
         let index = pivotIndex + 1;
