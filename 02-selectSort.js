@@ -5,12 +5,12 @@
  * 升序：第一遍遍历选择出最小的数组的位置，将第一个元素和选择出的最小值交换
  * 依次遍历选择。
  */
-(function(){
-    const ascSort = function(array){
+(function () {
+    const ascSort = function (array) {
         let min = 0;
         for (let i = 0; i < array.length; i++) {
             for (let j = i; j < array.length; j++) {
-                if(array[min]>array[j]){
+                if (array[min] > array[j]) {
                     min = j;
                 }
             }

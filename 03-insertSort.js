@@ -6,15 +6,15 @@
  * 第一个认为已排序，取出下一个元素，在已经排序的元素序列中从后向前扫描，
  * 如果前一个比自己小则插入到当前位置。
  */
-(function(){
-    const ascSort = function(array){
-        for(let i =1; i< array.length; i++){
-            for(let j=i; j>0; j--){
+(function () {
+    const ascSort = function (array) {
+        for (let i = 1; i < array.length; i++) {
+            for (let j = i; j > 0; j--) {
                 let temp = array[j];
-                if(temp < array[j-1]){
-                    array[j]=array[j-1];
-                    array[j-1]=temp;
-                }else{
+                if (temp < array[j - 1]) {
+                    array[j] = array[j - 1];
+                    array[j - 1] = temp;
+                } else {
                     break;
                 }
             }
@@ -22,15 +22,15 @@
         return array;
     }
 
-    const ascSortUseWhile = function(array){
-        for(let i =1; i< array.length; i++){
+    const ascSortUseWhile = function (array) {
+        for (let i = 1; i < array.length; i++) {
             let temp = array[i];
-            let preIndex = i-1;
-            while(preIndex>=0 && array[preIndex]>temp){
-                array[preIndex+1]=array[preIndex];
+            let preIndex = i - 1;
+            while (preIndex >= 0 && array[preIndex] > temp) {
+                array[preIndex + 1] = array[preIndex];
                 preIndex--;
             }
-            array[preIndex+1] = temp;
+            array[preIndex + 1] = temp;
         }
         return array;
     }
